@@ -73,9 +73,7 @@ html, body {
   width: 80%;
   background: linear-gradient(to right, #f59e0b, #d97706);
 }
-.timeline-phase:last-child::after {
-  display: none;
-}
+
 .timeline-number {
   width: 40px;
   height: 40px;
