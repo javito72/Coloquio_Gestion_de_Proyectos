@@ -68,17 +68,17 @@ function initRiskChart() {
       datasets: [
         {
           label: 'Sobrecarga Equipo',
-          data: [{ x: 3, y: 3, r: 14 }], // Aumentado el tamaño de la burbuja roja
+          data: [{ x: 3, y: 3, r: 9 }], // Aumentado el tamaño de la burbuja roja
           backgroundColor: 'rgba(239, 68, 68, 0.9)'
         },
         {
           label: 'Integración APIs',
-          data: [{ x: 2, y: 3, r: 8 }],
+          data: [{ x: 2, y: 3, r: 6 }],
           backgroundColor: 'rgba(251, 146, 60, 0.7)'
         },
         {
           label: 'Seguridad',
-          data: [{ x: 2, y: 2.8, r: 8 }],
+          data: [{ x: 2, y: 2.8, r: 6 }],
           backgroundColor: 'rgba(251, 191, 36, 0.7)'
         }
       ]
