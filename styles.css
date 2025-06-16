@@ -1,8 +1,11 @@
+/* styles.css */
 html, body { 
   font-family: 'Inter', sans-serif; 
   color: white; 
-  background: linear-gradient(135deg, #0f172a, #1e293b);
   overflow-y: hidden;
+}
+body {
+  background: #465e96; /* Fondo uniforme para todas las secciones */
 }
 .hero-gradient { background: linear-gradient(135deg, #f59e0b, #d97706); }
 .card-hover { transition: all 0.3s ease; }

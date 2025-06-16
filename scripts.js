@@ -68,18 +68,21 @@ function initRiskChart() {
       datasets: [
         {
           label: 'Sobrecarga Equipo',
-          data: [{ x: 3, y: 3, r: 9 }], // Aumentado el tamaño de la burbuja roja
-          backgroundColor: 'rgba(239, 68, 68, 0.9)'
+          data: [{ x: 3, y: 3, r: 9 }],
+          backgroundColor: 'rgba(239, 68, 68, 0.9)',
+          color: 'white' // Texto blanco para este dataset
         },
         {
           label: 'Integración APIs',
           data: [{ x: 2, y: 3, r: 6 }],
-          backgroundColor: 'rgba(251, 146, 60, 0.7)'
+          backgroundColor: 'rgba(251, 146, 60, 0.7)',
+          color: 'white' // Texto blanco para este dataset
         },
         {
           label: 'Seguridad',
           data: [{ x: 2, y: 2.8, r: 6 }],
-          backgroundColor: 'rgba(251, 191, 36, 0.7)'
+          backgroundColor: 'rgba(251, 191, 36, 0.7)',
+          color: 'white' // Texto blanco para este dataset
         }
       ]
     },
@@ -87,7 +90,12 @@ function initRiskChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom' },
+        legend: { 
+          position: 'bottom',
+          labels: {
+            color: 'white' // Leyenda en blanco
+          }
+        },
         tooltip: {
           callbacks: {
             label: ctx => `${ctx.dataset.label}: Nivel ${ctx.raw.r}`
@@ -105,9 +113,9 @@ function initRiskChart() {
             }
           },
           min: 1, 
-          max: 4, // Aumentado el rango para dar espacio
+          max: 4,
           ticks: {
-            color: '#cbd5e1',
+            color: 'white', // Cambiado a blanco
             stepSize: 1,
             callback: function(value) {
               const labels = ['Baja', 'Media', 'Alta', ''];
@@ -128,9 +136,9 @@ function initRiskChart() {
             }
           },
           min: 1, 
-          max: 4, // Aumentado el rango para dar espacio
+          max: 4,
           ticks: {
-            color: '#cbd5e1',
+            color: 'white', // Cambiado a blanco
             stepSize: 1,
             callback: function(value) {
               const labels = ['Bajo', 'Medio', 'Alto', ''];

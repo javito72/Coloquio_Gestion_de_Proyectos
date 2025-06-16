@@ -7,347 +7,360 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Configuración de Tailwind para color uniforme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'uniform-bg': '#465e96',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-uniform-bg">
   <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 opacity-50"></div>
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <div class="hero-gradient w-32 h-32 rounded-full mx-auto mb-8 flex items-center justify-center pulse-animation">
-                <span class="text-4xl">🚀</span>
-            </div>
-            <h1 class="text-6xl md:text-8xl font-black mb-6">
-                <span class="typewriter">ArgenTech</span>
-            </h1>
-            <br>
-            <br>
-            <p class="text-2xl md:text-3xl font-light mb-8 text-gray-300">
-                Revolucionando la gestión hotelera en Latinoamérica con soluciones tecnológicas innovadoras y prácticas de gestión de proyectos de última generación.
-            </p>
-            </div>
-        </div>
-    </section>
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 opacity-50"></div>
+      <div class="container mx-auto px-6 text-center relative z-10">
+          <div class="hero-gradient w-32 h-32 rounded-full mx-auto mb-8 flex items-center justify-center pulse-animation">
+              <span class="text-4xl">🚀</span>
+          </div>
+          <h1 class="text-6xl md:text-8xl font-black mb-6">
+              <span class="typewriter">ArgenTech</span>
+          </h1>
+          <br>
+          <br>
+          <p class="text-2xl md:text-3xl font-light mb-8 text-gray-300">
+              Revolucionando la gestión hotelera en Latinoamérica con soluciones tecnológicas innovadoras y prácticas de gestión de proyectos de última generación.
+          </p>
+          </div>
+      </div>
+  </section>
 
-    <!-- Problem Section -->
-    <section id="problem" class="min-h-screen flex items-center py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-4">El Problema</h2>
-                <p class="text-xl text-gray-300">Los hoteles pequeños y medianos están perdiendo la batalla tecnológica</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
-                        <div class="flex items-center mb-4">
-                            <span class="text-4xl mr-4">💸</span>
-                            <h3 class="text-2xl font-bold">Pérdida de Ingresos</h3>
-                        </div>
-                        <p class="text-gray-300">Sobreventas, errores manuales y tarifas no optimizadas cuestan miles de dólares mensuales</p>
-                    </div>
-                    
-                    <div class="card-hover bg-orange-900/30 p-6 rounded-2xl border border-orange-500/20">
-                        <div class="flex items-center mb-4">
-                            <span class="text-4xl mr-4">⏰</span>
-                            <h3 class="text-2xl font-bold">Gestión Ineficiente</h3>
-                        </div>
-                        <p class="text-gray-300">Procesos manuales que consumen 60% más tiempo del necesario</p>
-                    </div>
-                    
-                    <div class="card-hover bg-yellow-900/30 p-6 rounded-2xl border border-yellow-500/20">
-                        <div class="flex items-center mb-4">
-                            <span class="text-4xl mr-4">📱</span>
-                            <h3 class="text-2xl font-bold">Brecha Digital</h3>
-                        </div>
-                        <p class="text-gray-300">Sistemas desactualizados vs. expectativas de huéspedes digitales</p>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <div class="impact-number">85%</div>
-                    <p class="text-2xl font-bold mb-4">de hoteles PYME</p>
-                    <p class="text-xl text-gray-300">aún operan con sistemas fragmentados y procesos manuales</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Problem Section -->
+  <section id="problem" class="min-h-screen flex items-center py-20">
+      <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+              <h2 class="text-5xl font-black mb-4">El Problema</h2>
+              <p class="text-xl text-gray-300">Los hoteles pequeños y medianos están perdiendo la batalla tecnológica</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="space-y-8">
+                  <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
+                      <div class="flex items-center mb-4">
+                          <span class="text-4xl mr-4">💸</span>
+                          <h3 class="text-2xl font-bold">Pérdida de Ingresos</h3>
+                      </div>
+                      <p class="text-gray-300">Sobreventas, errores manuales y tarifas no optimizadas cuestan miles de dólares mensuales</p>
+                  </div>
+                  
+                  <div class="card-hover bg-orange-900/30 p-6 rounded-2xl border border-orange-500/20">
+                      <div class="flex items-center mb-4">
+                          <span class="text-4xl mr-4">⏰</span>
+                          <h3 class="text-2xl font-bold">Gestión Ineficiente</h3>
+                      </div>
+                      <p class="text-gray-300">Procesos manuales que consumen 60% más tiempo del necesario</p>
+                  </div>
+                  
+                  <div class="card-hover bg-yellow-900/30 p-6 rounded-2xl border border-yellow-500/20">
+                      <div class="flex items-center mb-4">
+                          <span class="text-4xl mr-4">📱</span>
+                          <h3 class="text-2xl font-bold">Brecha Digital</h3>
+                      </div>
+                      <p class="text-gray-300">Sistemas desactualizados vs. expectativas de huéspedes digitales</p>
+                  </div>
+              </div>
+              
+              <div class="text-center">
+                  <div class="impact-number">85%</div>
+                  <p class="text-2xl font-bold mb-4">de hoteles PYME</p>
+                  <p class="text-xl text-gray-300">aún operan con sistemas fragmentados y procesos manuales</p>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <!-- Solution Section -->
-    <section id="solution" class="min-h-screen flex items-center py-20 bg-gradient-to-br from-slate-800 to-slate-900">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-4">Nuestra Solución</h2>
-                <p class="text-xl text-gray-300">Una plataforma SaaS completa y accesible</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="card-hover bg-emerald-900/30 p-8 rounded-2xl border border-emerald-500/20 text-center">
-                    <span class="text-6xl block mb-4">🔄</span>
-                    <h3 class="text-2xl font-bold mb-4">Unificación Total</h3>
-                    <p class="text-gray-300">Todos los canales de venta sincronizados en tiempo real</p>
-                </div>
-                
-                <div class="card-hover bg-blue-900/30 p-8 rounded-2xl border border-blue-500/20 text-center">
-                    <span class="text-6xl block mb-4">🤖</span>
-                    <h3 class="text-2xl font-bold mb-4">Automatización IA</h3>
-                    <p class="text-gray-300">Check-in digital y tarifas dinámicas inteligentes</p>
-                </div>
-                
-                <div class="card-hover bg-purple-900/30 p-8 rounded-2xl border border-purple-500/20 text-center">
-                    <span class="text-6xl block mb-4">📊</span>
-                    <h3 class="text-2xl font-bold mb-4">Datos Accionables</h3>
-                    <p class="text-gray-300">Reportes en tiempo real para decisiones informadas</p>
-                </div>
-            </div>
-            
-            <!-- KPIs Section -->
-            <div class="bg-gradient-to-r from-amber-900/20 to-orange-900/20 rounded-3xl p-8 border border-amber-500/30">
-                <h3 class="text-3xl font-bold text-center mb-8">Impacto Esperado</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-amber-400">20%</div>
-                        <p class="text-sm text-gray-300">Incremento Ingresos</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-amber-400">30%</div>
-                        <p class="text-sm text-gray-300">Reducción Tiempo</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-amber-400">100%</div>
-                        <p class="text-sm text-gray-300">Eliminar Sobreventas</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-amber-400">80%</div>
-                        <p class="text-sm text-gray-300">Adopción Digital</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Solution Section -->
+  <section id="solution" class="min-h-screen flex items-center py-20">
+      <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+              <h2 class="text-5xl font-black mb-4">Nuestra Solución</h2>
+              <p class="text-xl text-gray-300">Una plataforma SaaS completa y accesible</p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+              <div class="card-hover bg-emerald-900/30 p-8 rounded-2xl border border-emerald-500/20 text-center">
+                  <span class="text-6xl block mb-4">🔄</span>
+                  <h3 class="text-2xl font-bold mb-4">Unificación Total</h3>
+                  <p class="text-gray-300">Todos los canales de venta sincronizados en tiempo real</p>
+              </div>
+              
+              <div class="card-hover bg-blue-900/30 p-8 rounded-2xl border border-blue-500/20 text-center">
+                  <span class="text-6xl block mb-4">🤖</span>
+                  <h3 class="text-2xl font-bold mb-4">Automatización IA</h3>
+                  <p class="text-gray-300">Check-in digital y tarifas dinámicas inteligentes</p>
+              </div>
+              
+              <div class="card-hover bg-purple-900/30 p-8 rounded-2xl border border-purple-500/20 text-center">
+                  <span class="text-6xl block mb-4">📊</span>
+                  <h3 class="text-2xl font-bold mb-4">Datos Accionables</h3>
+                  <p class="text-gray-300">Reportes en tiempo real para decisiones informadas</p>
+              </div>
+          </div>
+          
+          <!-- KPIs Section -->
+          <div class="bg-black/20 rounded-3xl p-8 border border-amber-500/30">
+              <h3 class="text-3xl font-bold text-center mb-8">Impacto Esperado</h3>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div class="text-center">
+                      <div class="text-4xl font-black text-amber-400">20%</div>
+                      <p class="text-sm text-gray-300">Incremento Ingresos</p>
+                  </div>
+                  <div class="text-center">
+                      <div class="text-4xl font-black text-amber-400">30%</div>
+                      <p class="text-sm text-gray-300">Reducción Tiempo</p>
+                  </div>
+                  <div class="text-center">
+                      <div class="text-4xl font-black text-amber-400">100%</div>
+                      <p class="text-sm text-gray-300">Eliminar Sobreventas</p>
+                  </div>
+                  <div class="text-center">
+                      <div class="text-4xl font-black text-amber-400">80%</div>
+                      <p class="text-sm text-gray-300">Adopción Digital</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <!-- Stakeholders Section -->
-    <section id="stakeholders" class="min-h-screen flex items-center py-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-4">Stakeholders Clave</h2>
-                <p class="text-xl text-gray-300">Mapa de influencia e importancia</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-6">
-                    <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Equipo Desarrollo</h3>
-                            <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm font-bold">CRÍTICO</span>
-                        </div>
-                        <p class="text-gray-300 text-sm">Motor técnico del proyecto. Su motivación = nuestro éxito.</p>
-                    </div>
-                    
-                    <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Dirección ArgenTech</h3>
-                            <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm font-bold">CRÍTICO</span>
-                        </div>
-                        <p class="text-gray-300 text-sm">Visión estratégica y recursos. Aprueban hitos clave.</p>
-                    </div>
-                    
-                    <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Clientes Piloto</h3>
-                            <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm font-bold">CRÍTICO</span>
-                        </div>
-                        <p class="text-gray-300 text-sm">Validación real del producto. Su feedback guía las iteraciones.</p>
-                    </div>
-                </div>
-                
-                <div class="space-y-6">
-                    <div class="card-hover bg-amber-900/30 p-6 rounded-2xl border border-amber-500/20">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Usuarios Finales</h3>
-                            <span class="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-bold">ALTO</span>
-                        </div>
-                        <p class="text-gray-300 text-sm">Recepcionistas y gerentes. Su adopción define el éxito.</p>
-                    </div>
-                    
-                    <div class="card-hover bg-amber-900/30 p-6 rounded-2xl border border-amber-500/20">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Proveedores API</h3>
-                            <span class="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-bold">ALTO</span>
-                        </div>
-                        <p class="text-gray-300 text-sm">Booking, Expedia, AWS. Dependencias críticas.</p>
-                    </div>
-                    
-                    <div class="card-hover bg-slate-700/30 p-6 rounded-2xl border border-slate-500/20">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Asociaciones Hoteleras</h3>
-                            <span class="px-3 py-1 bg-slate-500 text-white rounded-full text-sm font-bold">MEDIO</span>
-                        </div>
-                        <p class="text-gray-300 text-sm">Canales de difusión y validación sectorial.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Stakeholders Section -->
+  <section id="stakeholders" class="min-h-screen flex items-center py-20">
+      <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+              <h2 class="text-5xl font-black mb-4">Stakeholders Clave</h2>
+              <p class="text-xl text-gray-300">Mapa de influencia e importancia</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12">
+              <div class="space-y-6">
+                  <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
+                      <div class="flex items-center justify-between mb-4">
+                          <h3 class="text-xl font-bold">Equipo Desarrollo</h3>
+                          <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm font-bold">CRÍTICO</span>
+                      </div>
+                      <p class="text-gray-300 text-sm">Motor técnico del proyecto. Su motivación = nuestro éxito.</p>
+                  </div>
+                  
+                  <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
+                      <div class="flex items-center justify-between mb-4">
+                          <h3 class="text-xl font-bold">Dirección ArgenTech</h3>
+                          <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm font-bold">CRÍTICO</span>
+                      </div>
+                      <p class="text-gray-300 text-sm">Visión estratégica y recursos. Aprueban hitos clave.</p>
+                  </div>
+                  
+                  <div class="card-hover bg-red-900/30 p-6 rounded-2xl border border-red-500/20">
+                      <div class="flex items-center justify-between mb-4">
+                          <h3 class="text-xl font-bold">Clientes Piloto</h3>
+                          <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm font-bold">CRÍTICO</span>
+                      </div>
+                      <p class="text-gray-300 text-sm">Validación real del producto. Su feedback guía las iteraciones.</p>
+                  </div>
+              </div>
+              
+              <div class="space-y-6">
+                  <div class="card-hover bg-amber-900/30 p-6 rounded-2xl border border-amber-500/20">
+                      <div class="flex items-center justify-between mb-4">
+                          <h3 class="text-xl font-bold">Usuarios Finales</h3>
+                          <span class="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-bold">ALTO</span>
+                      </div>
+                      <p class="text-gray-300 text-sm">Recepcionistas y gerentes. Su adopción define el éxito.</p>
+                  </div>
+                  
+                  <div class="card-hover bg-amber-900/30 p-6 rounded-2xl border border-amber-500/20">
+                      <div class="flex items-center justify-between mb-4">
+                          <h3 class="text-xl font-bold">Proveedores API</h3>
+                          <span class="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-bold">ALTO</span>
+                      </div>
+                      <p class="text-gray-300 text-sm">Booking, Expedia, AWS. Dependencias críticas.</p>
+                  </div>
+                  
+                  <div class="card-hover bg-slate-700/30 p-6 rounded-2xl border border-slate-500/20">
+                      <div class="flex items-center justify-between mb-4">
+                          <h3 class="text-xl font-bold">Asociaciones Hoteleras</h3>
+                          <span class="px-3 py-1 bg-slate-500 text-white rounded-full text-sm font-bold">MEDIO</span>
+                      </div>
+                      <p class="text-gray-300 text-sm">Canales de difusión y validación sectorial.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <!-- Methodology Section -->
-    <section id="methodology" class="min-h-screen flex items-center py-20 bg-gradient-to-br from-slate-800 to-slate-900">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-4">Metodología: Scrumban</h2>
-                <p class="text-xl text-gray-300">Lo mejor de Scrum + Kanban para máxima eficiencia</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                <div class="card-hover bg-blue-900/30 p-8 rounded-2xl border border-blue-500/20">
-                    <h3 class="text-2xl font-bold mb-6 text-center">🏃‍♂️ De SCRUM</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <span class="text-blue-400 mr-3">✓</span>
-                            <span><strong>Sprints 1 semana:</strong> Entregas incrementales rápidas</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-blue-400 mr-3">✓</span>
-                            <span><strong>Ceremonias:</strong> Daily, Planning, Review para alineamiento</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-blue-400 mr-3">✓</span>
-                            <span><strong>Roles claros:</strong> Responsabilidades definidas</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="card-hover bg-green-900/30 p-8 rounded-2xl border border-green-500/20">
-                    <h3 class="text-2xl font-bold mb-6 text-center">🔄 De KANBAN</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">✓</span>
-                            <span><strong>Flujo visual:</strong> Transparencia total del trabajo</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">✓</span>
-                            <span><strong>Límites WIP:</strong> Evita sobrecarga del equipo</span>
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-400 mr-3">✓</span>
-                            <span><strong>Flexibilidad:</strong> Adaptación a cambios sin romper el ritmo</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Tools Ecosystem -->
-            <div class="bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-3xl p-8 border border-purple-500/30">
-                <h3 class="text-3xl font-bold text-center mb-8">Ecosistema de Herramientas</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">📋</div>
-                        <div class="font-bold">Jira</div>
-                        <div class="text-sm text-gray-400">Tablero Kanban</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">🔧</div>
-                        <div class="font-bold">GitHub</div>
-                        <div class="text-sm text-gray-400">Código + CI/CD</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">💬</div>
-                        <div class="font-bold">Slack</div>
-                        <div class="text-sm text-gray-400">Comunicación</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">📊</div>
-                        <div class="font-bold">SonarQube</div>
-                        <div class="text-sm text-gray-400">Calidad</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Methodology Section -->
+  <section id="methodology" class="min-h-screen flex items-center py-20">
+      <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+              <h2 class="text-5xl font-black mb-4">Metodología: Scrumban</h2>
+              <p class="text-xl text-gray-300">Lo mejor de Scrum + Kanban para máxima eficiencia</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 mb-16">
+              <div class="card-hover bg-blue-900/30 p-8 rounded-2xl border border-blue-500/20">
+                  <h3 class="text-2xl font-bold mb-6 text-center">🏃‍♂️ De SCRUM</h3>
+                  <ul class="space-y-4">
+                      <li class="flex items-center">
+                          <span class="text-blue-400 mr-3">✓</span>
+                          <span><strong>Sprints 1 semana:</strong> Entregas incrementales rápidas</span>
+                      </li>
+                      <li class="flex items-center">
+                          <span class="text-blue-400 mr-3">✓</span>
+                          <span><strong>Ceremonias:</strong> Daily, Planning, Review para alineamiento</span>
+                      </li>
+                      <li class="flex items-center">
+                          <span class="text-blue-400 mr-3">✓</span>
+                          <span><strong>Roles claros:</strong> Responsabilidades definidas</span>
+                      </li>
+                  </ul>
+              </div>
+              
+              <div class="card-hover bg-green-900/30 p-8 rounded-2xl border border-green-500/20">
+                  <h3 class="text-2xl font-bold mb-6 text-center">🔄 De KANBAN</h3>
+                  <ul class="space-y-4">
+                      <li class="flex items-center">
+                          <span class="text-green-400 mr-3">✓</span>
+                          <span><strong>Flujo visual:</strong> Transparencia total del trabajo</span>
+                      </li>
+                      <li class="flex items-center">
+                          <span class="text-green-400 mr-3">✓</span>
+                          <span><strong>Límites WIP:</strong> Evita sobrecarga del equipo</span>
+                      </li>
+                      <li class="flex items-center">
+                          <span class="text-green-400 mr-3">✓</span>
+                          <span><strong>Flexibilidad:</strong> Adaptación a cambios sin romper el ritmo</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          
+          <!-- Tools Ecosystem -->
+          <div class="bg-black/20 rounded-3xl p-8 border border-purple-500/30">
+              <h3 class="text-3xl font-bold text-center mb-8">Ecosistema de Herramientas</h3>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div class="text-center">
+                      <div class="text-3xl mb-2">📋</div>
+                      <div class="font-bold">Jira</div>
+                      <div class="text-sm text-gray-400">Tablero Kanban</div>
+                  </div>
+                  <div class="text-center">
+                      <div class="text-3xl mb-2">🔧</div>
+                      <div class="font-bold">GitHub</div>
+                      <div class="text-sm text-gray-400">Código + CI/CD</div>
+                  </div>
+                  <div class="text-center">
+                      <div class="text-3xl mb-2">💬</div>
+                      <div class="font-bold">Slack</div>
+                      <div class="text-sm text-gray-400">Comunicación</div>
+                  </div>
+                  <div class="text-center">
+                      <div class="text-3xl mb-2">📊</div>
+                      <div class="font-bold">SonarQube</div>
+                      <div class="text-sm text-gray-400">Calidad</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-    <!-- Timeline Section - Versión Compacta -->
-    <section id="timeline" class="min-h-screen flex items-center py-10">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-10">
-                <h2 class="text-5xl font-black mb-4">Cronograma Ejecutivo</h2>
-                <p class="text-xl text-gray-300">4 meses, 16 sprints, 4 fases críticas</p>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-8">
-                <!-- Phase 1 -->
-                <div class="timeline-phase">
-                    <div class="timeline-number">1</div>
-                    <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
-                        <h3 class="text-xl font-bold mb-2">Fase 1: Análisis</h3>
-                        <p class="text-amber-400 font-semibold text-sm mb-2">Mes 1 - Sprints 1-4</p>
-                        <p class="text-gray-300 text-xs mb-3">Arquitectura técnica, prototipos, investigación</p>
-                        <div class="text-amber-300 font-bold text-sm">🎯 Arquitectura Definida</div>
-                    </div>
-                </div>
-                
-                <!-- Phase 2 -->
-                <div class="timeline-phase">
-                    <div class="timeline-number">2</div>
-                    <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
-                        <h3 class="text-xl font-bold mb-2">Fase 2: Core</h3>
-                        <p class="text-amber-400 font-semibold text-sm mb-2">Mes 2 - Sprints 5-8</p>
-                        <p class="text-gray-300 text-xs mb-3">Gestor canales, reservas, motor tarifas</p>
-                        <div class="text-amber-300 font-bold text-sm">🎯 MVP Core Operativo</div>
-                    </div>
-                </div>
-                
-                <!-- Phase 3 -->
-                <div class="timeline-phase">
-                    <div class="timeline-number">3</div>
-                    <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
-                        <h3 class="text-xl font-bold mb-2">Fase 3: Avanzado</h3>
-                        <p class="text-amber-400 font-semibold text-sm mb-2">Mes 3 - Sprints 9-12</p>
-                        <p class="text-gray-300 text-xs mb-3">Check-in digital, IA, dashboard</p>
-                        <div class="text-amber-300 font-bold text-sm">🎯 Beta Release</div>
-                    </div>
-                </div>
-                
-                <!-- Phase 4 -->
-                <div class="timeline-phase">
-                    <div class="timeline-number">4</div>
-                    <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
-                        <h3 class="text-xl font-bold mb-2">Fase 4: Go-Live</h3>
-                        <p class="text-amber-400 font-semibold text-sm mb-2">Mes 4 - Sprints 13-16</p>
-                        <p class="text-gray-300 text-xs mb-3">Testing, seguridad, despliegue</p>
-                        <div class="text-amber-300 font-bold text-sm">🚀 Lanzamiento</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Visualización adicional -->
-            <div class="mt-16">
-                <h3 class="text-2xl font-bold mb-6 text-center">Progreso del Proyecto</h3>
-                <div class="progress-bar w-full bg-slate-700/50">
-                    <div id="projectProgress" class="progress-fill w-full">100% - Lanzamiento Completado</div>
-                </div>
-                <div class="grid grid-cols-4 gap-4 mt-4">
-                    <div class="text-center text-xs">
-                        <div class="font-bold">Sprint 1-4</div>
-                        <div class="text-gray-400">Semana 1-4</div>
-                    </div>
-                    <div class="text-center text-xs">
-                        <div class="font-bold">Sprint 5-8</div>
-                        <div class="text-gray-400">Semana 5-8</div>
-                    </div>
-                    <div class="text-center text-xs">
-                        <div class="font-bold">Sprint 9-12</div>
-                        <div class="text-gray-400">Semana 9-12</div>
-                    </div>
-                    <div class="text-center text-xs">
-                        <div class="font-bold">Sprint 13-16</div>
-                        <div class="text-gray-400">Semana 13-16</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Timeline Section - Versión Compacta -->
+  <section id="timeline" class="min-h-screen flex items-center py-10">
+      <div class="container mx-auto px-6">
+          <div class="text-center mb-10">
+              <h2 class="text-5xl font-black mb-4">Cronograma Ejecutivo</h2>
+              <p class="text-xl text-gray-300">4 meses, 16 sprints, 4 fases críticas</p>
+          </div>
+          
+          <div class="flex flex-wrap justify-center gap-8">
+              <!-- Phase 1 -->
+              <div class="timeline-phase">
+                  <div class="timeline-number">1</div>
+                  <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
+                      <h3 class="text-xl font-bold mb-2">Fase 1: Análisis</h3>
+                      <p class="text-amber-400 font-semibold text-sm mb-2">Mes 1 - Sprints 1-4</p>
+                      <p class="text-gray-300 text-xs mb-3">Arquitectura técnica, prototipos, investigación</p>
+                      <div class="text-amber-300 font-bold text-sm">🎯 Arquitectura Definida</div>
+                  </div>
+              </div>
+              
+              <!-- Phase 2 -->
+              <div class="timeline-phase">
+                  <div class="timeline-number">2</div>
+                  <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
+                      <h3 class="text-xl font-bold mb-2">Fase 2: Core</h3>
+                      <p class="text-amber-400 font-semibold text-sm mb-2">Mes 2 - Sprints 5-8</p>
+                      <p class="text-gray-300 text-xs mb-3">Gestor canales, reservas, motor tarifas</p>
+                      <div class="text-amber-300 font-bold text-sm">🎯 MVP Core Operativo</div>
+                  </div>
+              </div>
+              
+              <!-- Phase 3 -->
+              <div class="timeline-phase">
+                  <div class="timeline-number">3</div>
+                  <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
+                      <h3 class="text-xl font-bold mb-2">Fase 3: Avanzado</h3>
+                      <p class="text-amber-400 font-semibold text-sm mb-2">Mes 3 - Sprints 9-12</p>
+                      <p class="text-gray-300 text-xs mb-3">Check-in digital, IA, dashboard</p>
+                      <div class="text-amber-300 font-bold text-sm">🎯 Beta Release</div>
+                  </div>
+              </div>
+              
+              <!-- Phase 4 -->
+              <div class="timeline-phase">
+                  <div class="timeline-number">4</div>
+                  <div class="card-hover bg-amber-900/30 p-5 rounded-2xl border border-amber-500/20">
+                      <h3 class="text-xl font-bold mb-2">Fase 4: Go-Live</h3>
+                      <p class="text-amber-400 font-semibold text-sm mb-2">Mes 4 - Sprints 13-16</p>
+                      <p class="text-gray-300 text-xs mb-3">Testing, seguridad, despliegue</p>
+                      <div class="text-amber-300 font-bold text-sm">🚀 Lanzamiento</div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Visualización adicional -->
+          <div class="mt-16">
+              <h3 class="text-2xl font-bold mb-6 text-center">Progreso del Proyecto</h3>
+              <div class="progress-bar w-full bg-slate-800/70">
+                  <div id="projectProgress" class="progress-fill w-full">100% - Lanzamiento Completado</div>
+              </div>
+              <div class="grid grid-cols-4 gap-4 mt-4">
+                  <div class="text-center text-xs">
+                      <div class="font-bold">Sprint 1-4</div>
+                      <div class="text-gray-400">Semana 1-4</div>
+                  </div>
+                  <div class="text-center text-xs">
+                      <div class="font-bold">Sprint 5-8</div>
+                      <div class="text-gray-400">Semana 5-8</div>
+                  </div>
+                  <div class="text-center text-xs">
+                      <div class="font-bold">Sprint 9-12</div>
+                      <div class="text-gray-400">Semana 9-12</div>
+                  </div>
+                  <div class="text-center text-xs">
+                      <div class="font-bold">Sprint 13-16</div>
+                      <div class="text-gray-400">Semana 13-16</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 
-     <!-- Sección de Riesgos -->
-  <section id="risks" class="min-h-screen flex items-center py-20 bg-gradient-to-br from-slate-800 to-slate-900">
+   <!-- Sección de Riesgos -->
+  <section id="risks" class="min-h-screen flex items-center py-20">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-5xl font-black mb-4">Riesgos & Mitigación</h2>
